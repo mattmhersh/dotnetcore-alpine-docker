@@ -1,8 +1,8 @@
 FROM microsoft/dotnet-nightly:2.1-sdk AS build-env
 WORKDIR /app
 
-COPY /webfilter.ascensus.com.crt ./
-Add /webfilter.ascensus.com.crt /usr/local/share/ca-certificates/webfilter.ascensus.com.crt
+COPY /web.crt ./
+Add /web.crt /usr/local/share/ca-certificates/web.crt
 RUN update-ca-certificates --verbose
 
 
